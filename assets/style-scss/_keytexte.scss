@@ -1,0 +1,35 @@
+// ----------------------------------------------
+// animations texte accueil
+// ----------------------------------------------
+
+.textebefore {
+  color: #ffc8c8;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.5);
+}
+.textebefore:before {
+  content: "HTML";
+  animation: animate infinite 5s;
+}
+@keyframes animate {
+  0% {
+    content: "HTML";
+  }
+  10% {
+    content: "HTML";
+  }
+  20% {
+    content: "CSS";
+  }
+  40% {
+    content: "Javascript";
+  }
+  60% {
+    content: "Nodejs";
+  }
+  80% {
+    content: "Reactjs";
+  }
+  100% {
+    content: "Figma";
+  }
+}

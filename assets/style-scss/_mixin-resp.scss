@@ -1,0 +1,26 @@
+// media queries mobile
+@mixin mobile {
+  @media (max-width: 767px) {
+    @content; // On utilise la directive @content pour pouvoir insérer le code de la media query à l'endroit où on appelle la mixin.
+  }
+}
+
+// media queries tablette
+@mixin tablet {
+  @media (min-width: 768px) and (max-width: 1024px) {
+    @content;
+  }
+}
+// media queries tablette
+@mixin pc {
+  @media (min-width: 1024px) and (max-width: 1370px) {
+    @content;
+  }
+}
+
+// mixin de base dipslay flex centré
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,77 @@
+.intro__saber {
+  border: 6px solid wheat;
+  background: linear-gradient(to bottom left, #487354, rgba(0, 0, 0, 0.951));
+  margin: 40px auto;
+  width: fit-content;
+  height: 30px;
+  padding: 20px 40px;
+  //  border: 3px solid red;
+  border-radius: 30px;
+  box-shadow: 0px 7px 29px 4px rgba(0, 0, 0, 0.25);
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: fit-content;
+    padding-right: 75px;
+  }
+  @include mobile {
+    width: fit-content;
+    height: fit-content;
+  }
+  &__title {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    @include tablet {
+      width: 100%;
+      text-align: center;
+    }
+    @include mobile {
+      position: relative;
+      gap: 30px;
+    }
+    h2,
+    h3 {
+      font-size: 32px;
+      font-family: $font1;
+      font-weight: 300;
+      color: white;
+      @include mobile {
+        // font-size: 29px;
+      }
+      span {
+        // color: #ffc8c8;
+        color: wheat;
+        font-size: 80px;
+        top: 215px;
+        position: absolute;
+        // border: 1px red solid;
+        @include tablet {
+          top: 245px;
+        }
+        @include mobile {
+          top: -39px;
+        }
+      }
+      .eclamationspan {
+        color: wheat;
+        font-size: 60px;
+        top: 235px;
+        position: absolute;
+        margin-left: 4px;
+        @include tablet {
+          top: 265px;
+          margin-left: 8px;
+        }
+        @include mobile {
+        }
+      }
+    }
+    .intro__saber__title__disable {
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+}
