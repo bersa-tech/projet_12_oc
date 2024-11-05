@@ -1,0 +1,105 @@
+.design__mobile {
+  display: none;
+  @include mobile {
+    //border: red 6px solid;
+    display: block;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 90px;
+    @include flex-center;
+  }
+  &__0 {
+    @include mobile {
+      width: 100%;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      border: wheat 6px solid;
+      background: linear-gradient(to top, #7a99ad, rgb(0, 0, 0));
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+    }
+    &__1 {
+      @include mobile {
+        animation: appear1 2s ease 0s 1 normal forwards;
+        width: 300px;
+        height: 110px;
+        border: #7a99ad 2px solid;
+        border-radius: 6px;
+        background: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.951));
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+        margin-right: 0px;
+        margin-top: -40px;
+        padding-bottom: 1rem;
+        &:hover {
+          background: linear-gradient(to top, #7a99ad, rgb(0, 0, 0));
+        }
+      }
+    }
+    &__2 {
+      @include mobile {
+        animation: appear1 3s ease 0s 1 normal forwards;
+        width: 300px;
+        height: 110px;
+        border: red 2px solid;
+        border-radius: 6px;
+        background-color: #1d1e22;
+        background-color: transparent;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+        margin-right: 0px;
+        padding-bottom: 1rem;
+        &:hover {
+          background: linear-gradient(
+            to right,
+            rgba(255, 0, 0, 0.496),
+            rgb(0, 0, 0)
+          );
+        }
+      }
+    }
+    &__3 {
+      @include mobile {
+        animation: appear1 4s ease 0s 1 normal forwards;
+        width: 300px;
+        height: 110px;
+        border: orange 2px solid;
+        border-radius: 6px;
+        background-color: #1d1e22;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+        margin-right: 0px;
+        margin-bottom: -30px;
+        padding-bottom: 1rem;
+        &:hover {
+          background: linear-gradient(to bottom, orange, rgb(0, 0, 0));
+        }
+      }
+    }
+    &__head {
+      @include mobile {
+        margin-left: 15px;
+        margin-top: 15px;
+        margin-bottom: 8px;
+        font-size: 14px;
+        font-family: Work Sans, sans-serif;
+        font-weight: 700;
+        letter-spacing: 1.57px;
+      }
+    }
+    &__texte {
+      @include mobile {
+        padding: 0.5rem;
+        font-size: 1em;
+        display: flex;
+        flex-direction: column;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+          Liberation Mono, Courier New, monospace;
+        font-feature-settings: normal;
+        font-variation-settings: normal;
+        line-height: 1.4;
+      }
+    }
+  }
+}
+// -----------------------------------------------------------------------

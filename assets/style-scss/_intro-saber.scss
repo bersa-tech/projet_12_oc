@@ -18,6 +18,10 @@
   @include mobile {
     width: fit-content;
     height: fit-content;
+    margin: 0 auto;
+    padding: 20px 20px;
+    animation: myAnim 2s ease 0s 1 normal forwards;
+    //margin-bottom: 70px;
   }
   &__title {
     display: flex;
@@ -28,8 +32,10 @@
       text-align: center;
     }
     @include mobile {
+      animation: appear1 1.5s ease 0s 1 normal forwards;
       position: relative;
-      gap: 30px;
+      gap: 25px;
+      width: 265px;
     }
     h2,
     h3 {
@@ -38,7 +44,8 @@
       font-weight: 300;
       color: white;
       @include mobile {
-        // font-size: 29px;
+        font-size: 25px;
+        font-weight: 500;
       }
       span {
         // color: #ffc8c8;
@@ -46,12 +53,11 @@
         font-size: 80px;
         top: 215px;
         position: absolute;
-        // border: 1px red solid;
         @include tablet {
           top: 245px;
         }
         @include mobile {
-          top: -39px;
+          top: -47px;
         }
       }
       .eclamationspan {

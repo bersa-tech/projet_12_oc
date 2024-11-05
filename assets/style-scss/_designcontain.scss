@@ -28,18 +28,23 @@
   width: 90%;
   border-radius: 25px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-  margin-bottom: 153px;
+  margin-bottom: 75px;
   @include tablet {
     width: 90%;
   }
   @include mobile {
-    width: 90%;
+    width: 99%;
+    border-top: wheat 6px solid;
+    border-bottom: wheat 6px solid;
+    border-radius: 0%;
+    margin-top: 30px;
+    margin-bottom: 60px;
   }
   .design__main {
     display: flex;
     background-color: rgb(230 239 222);
     padding: 20px;
-    width: 95%;
+    width: 90%;
     border-radius: 25px;
     @include tablet {
       flex-direction: column;
@@ -119,17 +124,11 @@
             text-align: center;
             width: 320px;
             margin-top: 20px;
-            font-size: 30px;
-            font-weight: 900;
-          }
-          @include pc {
-            font-size: 60px;
-            font-weight: 900;
+            font-size: 40px;
+            font-weight: 600;
           }
           @include tablet {
             margin-top: 20px;
-            font-size: 60px;
-            font-weight: 900;
           }
         }
         p {
@@ -138,17 +137,14 @@
           font-weight: 900;
           @include mobile {
             margin-bottom: 20px;
-            font-size: 40px;
-            font-weight: 600;
+            font-size: 46px;
           }
           @include pc {
             font-size: 60px;
-            font-weight: 900;
           }
           @include tablet {
             margin-bottom: 20px;
             font-size: 60px;
-            font-weight: 900;
           }
         }
       }
@@ -186,13 +182,13 @@
       min-width: 340px;
     }
     @include pc {
-      margin-left: 0px;
+      margin-left: 20px;
     }
     @include tablet {
       margin-left: 0px;
     }
-
     &__1 {
+      animation: myAnim 7s ease 0s 1 normal forwards;
       width: 300px;
       height: 110px;
       border: #7a99ad 2px solid;
@@ -210,6 +206,7 @@
       }
     }
     &__2 {
+      animation: myAnim 10s ease 0s 1 normal forwards;
       width: 300px;
       height: 110px;
       border: red 2px solid;
@@ -231,6 +228,7 @@
       );
     }
     &__3 {
+      animation: myAnim 3s ease 0s 1 normal forwards;
       width: 300px;
       height: 110px;
       border: orange 2px solid;
@@ -247,34 +245,25 @@
     &__3:hover {
       background: linear-gradient(to bottom, orange, rgb(0, 0, 0));
     }
-  }
-}
-
-.design__main__droite__0__head {
-  margin-left: 15px;
-  margin-top: 15px;
-  margin-bottom: 8px;
-  font-size: 14px;
-  font-family: Work Sans, sans-serif;
-  font-weight: 700;
-  letter-spacing: 1.57px;
-}
-
-.design__main__droite__0__texte {
-  padding: 0.5rem;
-  font-size: 1em;
-  display: flex;
-  flex-direction: column;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    Liberation Mono, Courier New, monospace;
-  font-feature-settings: normal;
-  font-variation-settings: normal;
-  line-height: 1.4;
-}
-
-.design__main__droite__mobile {
-  display: none;
-  @include mobile {
-    display: block;
+    &__head {
+      margin-left: 15px;
+      margin-top: 15px;
+      margin-bottom: 8px;
+      font-size: 14px;
+      font-family: Work Sans, sans-serif;
+      font-weight: 700;
+      letter-spacing: 1.57px;
+    }
+    &__texte {
+      padding: 0.5rem;
+      font-size: 1em;
+      display: flex;
+      flex-direction: column;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+        Liberation Mono, Courier New, monospace;
+      font-feature-settings: normal;
+      font-variation-settings: normal;
+      line-height: 1.4;
+    }
   }
 }

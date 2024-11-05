@@ -7,9 +7,21 @@ header {
   box-shadow: 0px 7px 29px 4px rgba(0, 0, 0, 0.75);
   border-radius: 50px;
   @include mobile {
-    width: 95%;
+    // width: 95%;
+    // height: 120px;
+    // margin-bottom: 20px; // Centrage horizontal du header
+    width: 100%;
     height: 120px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 30px;
+    border-radius: 0px;
+    // background: black;
+    background: linear-gradient(to left, #487354, rgba(0, 0, 0, 0.951));
+    border-bottom: wheat 6px solid;
+    border-top: wheat 6px solid;
   }
+
   h1 {
     @include flex-center;
     width: fit-content;
@@ -19,9 +31,10 @@ header {
     font-weight: 400;
     padding-left: 90px;
     @include mobile {
+      animation: appear1 1s ease 0s 1 normal forwards;
       justify-content: flex-start;
       width: 100%;
-      padding-left: 20px;
+      padding-left: 30px;
       font-size: 40px;
       font-weight: 400;
     }
@@ -32,5 +45,16 @@ header {
     font-size: 100px;
     padding-bottom: 34px;
     //border: 1px solid red;
+  }
+  .pc {
+    display: none;
+    @include mobile {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 30px;
+      font-size: 50px;
+      animation: myAnim2 2s ease 0s 1 normal forwards;
+    }
   }
 }
