@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Varela&display=swap");
 * {
   font-family: "Lexend";
@@ -368,6 +369,38 @@ header .pc {
     transform: scale(1);
   }
 }
+/* Animation de rebond */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+/* Animation de fade-in montée */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Animation shimmer (reflet lumineux) */
+@keyframes shimmer {
+  0% {
+    left: -150%;
+  }
+  100% {
+    left: 150%;
+  }
+}
 .white {
   color: white;
 }
@@ -706,7 +739,7 @@ header .pc {
   height: 540px;
 }
 .contact-container {
-  animation: appear1 3.4s ease 0s 1 normal forwards;
+  animation: appear1 2s ease 0s 1 normal forwards;
   margin: auto;
   flex: 0 1 700px;
   padding: 10px;
@@ -863,41 +896,80 @@ header .pc {
 
 footer {
   display: flex;
-  background: linear-gradient(to bottom left, #487354, rgba(0, 0, 0, 0.951));
-  height: 150px;
-  width: 90%;
-  margin: 40px auto;
+  background: black;
+  height: 250px;
+  width: 100%;
+  margin: 0 auto;
   box-shadow: 0px 7px 29px 4px rgba(0, 0, 0, 0.75);
-  border-radius: 50px;
-}
-@media (max-width: 767px) {
-  footer {
-    width: 95%;
-    height: 120px;
-  }
-}
-footer h2 {
+  border-top: wheat 6px solid;
+  border-bottom: wheat 16px solid;
+  margin-top: 70px;
+  flex-direction: column;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: fit-content;
+  gap: 25px;
+  /* Couleur au survol pour chaque icône */
+}
+footer i {
+  color: white;
+  font-size: 40px;
+  transition: color 0.3s, transform 0.3s; /* Transition pour la couleur et la transformation */
+}
+footer i.fa-chevron-up {
+  animation: bounce 2s infinite; /* Animation rebond continu */
+}
+footer i.fa-chevron-up:hover {
+  color: #ff79da; /* Exemple de couleur pour le survol */
+}
+footer h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   color: white;
   font-family: "Lexend";
-  font-size: 50px;
-  font-weight: 400;
-  padding-left: 90px;
+  font-size: 32px;
+  font-weight: 700;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 2s ease forwards;
 }
 @media (max-width: 767px) {
-  footer h2 {
-    justify-content: flex-start;
-    width: 100%;
-    padding-left: 20px;
-    font-size: 40px;
-    font-weight: 400;
+  footer h3 {
+    font-size: 26px;
   }
 }
-footer h2 span {
-  color: wheat;
-  font-size: 100px;
-  padding-bottom: 34px;
+footer .Copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: white;
+  font-family: "Lexend";
+  font-size: 18px;
+  font-weight: 400;
+}
+footer .social-icons {
+  display: flex;
+  list-style: none;
+  gap: 55px;
+  padding: 0;
+}
+footer .social-icons li a {
+  color: #333;
+  font-size: 24px;
+  transition: color 0.3s, transform 0.3s; /* Transition pour la couleur et le zoom */
+}
+footer .social-icons li a:hover .fa-linkedin {
+  color: #0077b5; /* Bleu LinkedIn */
+  transform: scale(1.3); /* Légère augmentation de la taille */
+}
+footer .social-icons li a:hover .fa-github {
+  color: #333333; /* Gris foncé GitHub */
+  transform: scale(1.3); /* Légère augmentation de la taille */
+}
+footer .social-icons li a:hover .fa-instagram {
+  color: #e4405f; /* Rose Instagram */
+  transform: scale(1.3); /* Légère augmentation de la taille */
 }
