@@ -23,6 +23,7 @@ header {
   }
 
   h1 {
+    animation: appear1 1s ease 0s 1 normal forwards;
     @include flex-center;
     width: fit-content;
     color: white;
@@ -31,7 +32,6 @@ header {
     font-weight: 400;
     padding-left: 90px;
     @include mobile {
-      animation: appear1 1s ease 0s 1 normal forwards;
       justify-content: flex-start;
       width: 100%;
       padding-left: 30px;

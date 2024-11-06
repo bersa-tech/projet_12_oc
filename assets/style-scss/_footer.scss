@@ -11,9 +11,6 @@ footer {
   flex-direction: column;
   @include flex-center;
   gap: 25px;
-  @include mobile {
-    margin-top: 50px;
-  }
   i {
     color: white;
     font-size: 40px;

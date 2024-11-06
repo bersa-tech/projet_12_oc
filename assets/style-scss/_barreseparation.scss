@@ -1,0 +1,68 @@
+// .separate {
+//   background: black;
+//   height: 30px;
+//   width: 100%;
+//   box-shadow: 0px 7px 29px 4px rgba(0, 0, 0, 0.75);
+//   border-top: wheat 6px solid;
+//   border-bottom: wheat 6px solid;
+// }
+
+.separate {
+  position: relative;
+  overflow: hidden;
+  background: black;
+  height: 40px; // Augmentation de la hauteur pour le message
+  width: 100%;
+  box-shadow: 0px 7px 29px 4px rgba(0, 0, 0, 0.75);
+  border-top: wheat 6px solid;
+  border-bottom: wheat 6px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // Animation de défilement en continu
+  .scrolling-text {
+    color: white;
+    font-size: 23px;
+    white-space: nowrap;
+    animation: scroll 10s linear infinite;
+    font-family: $font1;
+    @include mobile {
+      animation: scroll 7s linear infinite;
+      font-size: 18px;
+    }
+  }
+
+  // Effet de brillance
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: skewX(-30deg);
+    animation: shine 2s infinite;
+  }
+}
+
+// Animation de défilement pour le texte
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+// Animation "shine" pour l’effet lumineux
+@keyframes shine {
+  0% {
+    left: 130%;
+  }
+  100% {
+    left: -50%;
+  }
+}

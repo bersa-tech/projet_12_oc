@@ -1,16 +1,9 @@
 .competences {
   padding: 0px 10px;
-  // background-color: #2a2a2a;
+  //background: linear-gradient(to bottom, transparent, rgb(24, 83, 46));
   text-align: center;
   margin: 0 auto;
   margin-bottom: 50px;
-
-  // h2 {
-  //   color: #f0f0f0;
-  //   font-size: 36px;
-  //   font-weight: 700;
-  //   margin-bottom: 40px;
-  // }
 
   .skills-grid {
     @include flex-center;
@@ -64,7 +57,8 @@
 
     &:hover {
       transform: scale(1.1);
-      background-color: #444;
+      // background-color: #444;
+      background-color: black;
       box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
     }
 
@@ -92,6 +86,30 @@
     &:hover .fa-paint-brush {
       color: #ff6347;
     } // UI/UX Design (orange)
+    // .fa-html5 {
+    //   color: #e34f26;
+    // } // HTML (rouge)
+    // .fa-css3-alt {
+    //   color: #264de4;
+    // } // CSS (bleu)
+    // .fa-sass {
+    //   color: #cc6699;
+    // } // Sass (rose)
+    // .fa-js-square {
+    //   color: #f0db4f;
+    // } // JavaScript (jaune)
+    // .fa-react {
+    //   color: #61dafb;
+    // } // React (bleu clair)
+    // .fa-figma {
+    //   color: #a259ff;
+    // } // Figma (violet)
+    // .fa-node-js {
+    //   color: #68a063;
+    // } // Node.js (vert)
+    // .fa-paint-brush {
+    //   color: #ff6347;
+    // } // UI/UX Design (orange)
   }
 
   /* Ajouter la barre de progression */

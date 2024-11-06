@@ -32,7 +32,7 @@
       text-align: center;
     }
     @include mobile {
-      animation: appear1 1.5s ease 0s 1 normal forwards;
+      // animation: appear1 1.5s ease 0s 1 normal forwards;
       position: relative;
       gap: 25px;
       width: 265px;
