@@ -903,13 +903,17 @@ footer {
   box-shadow: 0px 7px 29px 4px rgba(0, 0, 0, 0.75);
   border-top: wheat 6px solid;
   border-bottom: wheat 16px solid;
-  margin-top: 70px;
   flex-direction: column;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 25px;
   /* Couleur au survol pour chaque icône */
+}
+@media (max-width: 767px) {
+  footer {
+    margin-top: 50px;
+  }
 }
 footer i {
   color: white;
@@ -972,4 +976,149 @@ footer .social-icons li a:hover .fa-github {
 footer .social-icons li a:hover .fa-instagram {
   color: #e4405f; /* Rose Instagram */
   transform: scale(1.3); /* Légère augmentation de la taille */
+}
+
+.competences {
+  padding: 0px 10px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  /* Ajouter la barre de progression */
+  /* Personnaliser chaque barre selon la compétence */
+  /* Affichage du texte pourcentage à l'intérieur de la barre */
+}
+.competences .skills-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 768px;
+  gap: 30px;
+  justify-items: center;
+}
+@media (max-width: 767px) {
+  .competences .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    width: fit-content;
+    gap: 10px;
+  }
+}
+.competences .skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  width: 180px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+  border: wheat 6px solid;
+}
+@media (max-width: 767px) {
+  .competences .skill {
+    width: 120px;
+    height: 150px;
+  }
+}
+.competences .skill i {
+  font-size: 50px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+.competences .skill .ux-ui-text {
+  font-size: 17px;
+}
+.competences .skill span {
+  color: #f0f0f0;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.competences .skill:hover {
+  transform: scale(1.1);
+  background-color: #444;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+.competences .skill:hover .fa-html5 {
+  color: #e34f26;
+}
+.competences .skill:hover .fa-css3-alt {
+  color: #264de4;
+}
+.competences .skill:hover .fa-sass {
+  color: #cc6699;
+}
+.competences .skill:hover .fa-js-square {
+  color: #f0db4f;
+}
+.competences .skill:hover .fa-react {
+  color: #61dafb;
+}
+.competences .skill:hover .fa-figma {
+  color: #a259ff;
+}
+.competences .skill:hover .fa-node-js {
+  color: #68a063;
+}
+.competences .skill:hover .fa-paint-brush {
+  color: #ff6347;
+}
+.competences .progress-bar-container {
+  width: 100%;
+  background-color: #555;
+  border-radius: 10px;
+  margin-top: 20px;
+  height: 22px;
+  overflow: hidden;
+  position: relative;
+}
+.competences .progress-bar {
+  height: 100%;
+  width: 60%;
+  background-color: #4caf50;
+  transition: width 0.4s ease-in-out;
+  border-radius: 10px;
+}
+.competences .html .progress-bar {
+  background-color: #e34f26;
+}
+.competences .css .progress-bar {
+  background-color: #264de4;
+}
+.competences .scss .progress-bar {
+  background-color: #cc6699;
+}
+.competences .javascript .progress-bar {
+  background-color: #f0db4f;
+}
+.competences .react .progress-bar {
+  background-color: #61dafb;
+}
+.competences .figma .progress-bar {
+  background-color: #a259ff;
+}
+.competences .nodejs .progress-bar {
+  background-color: #68a063;
+}
+.competences .ux-ui .progress-bar {
+  background-color: #ff6347;
+}
+.competences .progress-bar-container {
+  position: relative;
+  text-align: center;
+}
+.competences .progress-bar-container::after {
+  content: attr(data-progress) "%"; /* Affiche le pourcentage */
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 0;
+  left: 0;
+  color: #fff;
+  font-weight: bold;
+  margin-top: 3px;
 }

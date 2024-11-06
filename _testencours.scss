@@ -1,0 +1,136 @@
+.competences {
+  padding: 50px;
+  background-color: #2a2a2a;
+  text-align: center;
+
+  h2 {
+    color: #f0f0f0;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+    justify-items: center;
+  }
+
+  .skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease,
+      box-shadow 0.3s ease;
+    width: 200px;
+
+    i {
+      font-size: 50px;
+      color: #ffffff;
+      margin-bottom: 10px;
+      transition: color 0.3s ease;
+    }
+
+    span {
+      color: #f0f0f0;
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      background-color: #444;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    &:hover .fa-html5 {
+      color: #e34f26;
+    } // HTML (rouge)
+    &:hover .fa-css3-alt {
+      color: #264de4;
+    } // CSS (bleu)
+    &:hover .fa-js-square {
+      color: #f0db4f;
+    } // JavaScript (jaune)
+    &:hover .fa-react {
+      color: #61dafb;
+    } // React (bleu clair)
+    &:hover .fa-figma {
+      color: #a259ff;
+    } // Figma (violet)
+    &:hover .fa-node-js {
+      color: #68a063;
+    } // Node.js (vert)
+    &:hover .fa-paint-brush {
+      color: #ff6347;
+    } // UI/UX Design (orange)
+  }
+
+  /* Ajouter la barre de progression */
+  .progress-bar-container {
+    width: 100%;
+    background-color: #555;
+    border-radius: 10px;
+    margin-top: 20px;
+    height: 22px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .progress-bar {
+    height: 100%;
+    width: 60%; // Valeur par défaut, à modifier manuellement pour chaque compétence
+    background-color: #4caf50; // Vert par défaut
+    transition: width 0.4s ease-in-out;
+    border-radius: 10px;
+  }
+
+  /* Personnaliser chaque barre selon la compétence */
+  .html .progress-bar {
+    background-color: #e34f26;
+  }
+  .css .progress-bar {
+    background-color: #264de4;
+  }
+  .scss .progress-bar {
+    background-color: #ff8c00;
+  }
+  .javascript .progress-bar {
+    background-color: #f0db4f;
+  }
+  .react .progress-bar {
+    background-color: #61dafb;
+  }
+  .figma .progress-bar {
+    background-color: #a259ff;
+  }
+  .nodejs .progress-bar {
+    background-color: #68a063;
+  }
+  .ux-ui .progress-bar {
+    background-color: #ff6347;
+  }
+
+  /* Affichage du texte pourcentage à l'intérieur de la barre */
+  .progress-bar-container {
+    position: relative;
+    text-align: center;
+  }
+
+  .progress-bar-container::after {
+    content: attr(data-progress) "%"; /* Affiche le pourcentage */
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 0;
+    left: 0;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 3px;
+  }
+}

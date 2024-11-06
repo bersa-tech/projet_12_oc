@@ -1,17 +1,19 @@
 footer {
   display: flex;
   background: black;
-  //background: linear-gradient(to bottom left, #487354, rgba(0, 0, 0, 0.951));
+  // background: linear-gradient(to bottom left, #487354, rgba(0, 0, 0, 0.951));
   height: 250px;
   width: 100%;
   margin: 0 auto; // Centrage horizontal du header
   box-shadow: 0px 7px 29px 4px rgba(0, 0, 0, 0.75);
   border-top: wheat 6px solid;
   border-bottom: wheat 16px solid;
-  margin-top: 70px;
   flex-direction: column;
   @include flex-center;
   gap: 25px;
+  @include mobile {
+    margin-top: 50px;
+  }
   i {
     color: white;
     font-size: 40px;
