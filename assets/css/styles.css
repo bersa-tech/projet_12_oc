@@ -173,9 +173,11 @@ header .dotrose {
 @media (max-width: 767px) {
   .design__mobile {
     display: block;
-    width: 90%;
+    width: 100%;
     margin: auto;
-    margin-bottom: 90px;
+    padding-bottom: 60px;
+    padding-top: 10px;
+    background: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -184,7 +186,7 @@ header .dotrose {
 @media (max-width: 767px) {
   .design__mobile__0 {
     border: wheat 6px solid;
-    width: 100%;
+    width: 90%;
     height: 400px;
     display: flex;
     flex-direction: column;
@@ -525,11 +527,8 @@ header .dotrose {
   .design__container {
     width: 99%;
     border: none;
-    border-top: wheat 6px solid;
-    border-bottom: wheat 6px solid;
+    background: black;
     border-radius: 0%;
-    margin-top: 30px;
-    margin-bottom: 60px;
   }
 }
 .design__container .design__main {
@@ -554,6 +553,8 @@ header .dotrose {
     justify-content: center;
     align-items: center;
     width: 80%;
+    border: none;
+    background: none;
   }
 }
 .design__container .design__main__left {

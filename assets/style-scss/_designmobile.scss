@@ -3,15 +3,17 @@
   @include mobile {
     //border: red 6px solid;
     display: block;
-    width: 90%;
+    width: 100%;
     margin: auto;
-    margin-bottom: 90px;
+    padding-bottom: 60px;
+    padding-top: 10px;
+    background: black;
     @include flex-center;
   }
   &__0 {
     @include mobile {
       border: wheat 6px solid;
-      width: 100%;
+      width: 90%;
       height: 400px;
       display: flex;
       flex-direction: column;
