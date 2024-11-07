@@ -6,10 +6,13 @@
   text-shadow: 0 2px 0 rgba(0, 0, 0, 0.5);
 }
 .textebefore:before {
-  content: "HTML";
-  animation: animate infinite 5s;
+  content: "Islam";
+  animation: animate infinite 10s;
+  @include mobile {
+    animation: animate4 infinite 8s;
+  }
 }
-@keyframes animate {
+@keyframes animate4 {
   0% {
     content: "HTML";
   }
@@ -20,16 +23,42 @@
     content: "CSS";
   }
   40% {
-    content: "Javascript";
+    content: "SCSS";
   }
   60% {
-    content: "Nodejs";
+    content: "Javascript";
   }
   80% {
     content: "Reactjs";
   }
   100% {
     content: "Figma";
+  }
+}
+@keyframes animate {
+  0% {
+    content: "Islam";
+  }
+  15% {
+    content: "Islam";
+  }
+  25% {
+    content: "Makhachev";
+  }
+  40% {
+    content: "P4P";
+  }
+  55% {
+    content: "#1";
+  }
+  70% {
+    content: "Undisputed";
+  }
+  85% {
+    content: "Lightweight";
+  }
+  100% {
+    content: "Champion 🥇";
   }
 }
 

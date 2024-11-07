@@ -183,20 +183,37 @@ header .dotrose {
 }
 @media (max-width: 767px) {
   .design__mobile__0 {
+    border: wheat 6px solid;
     width: 100%;
     height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    border: wheat 6px solid;
-    background: linear-gradient(to top, #7a99ad, rgb(0, 0, 0));
-    background-image: url("/assets/images/islamvspoirier.jpg");
-    background-size: cover;
-    background-position: center;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
+    position: relative;
   }
+}
+.design__mobile__0::before {
+  content: ""; /* Crée un élément pseudo */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("/assets/images/makhachevposter.jpeg");
+  background-size: cover;
+  background-position: top center;
+  background-size: 150%;
+  transform-origin: center; /* Assure que la rotation se fait autour du centre */
+  transition: background-position 2s, transform 0s; /* Ajoute une transition pour l'animation */
+}
+.design__mobile__0.is-bottom::before {
+  background-position: bottom center; /* Position après clic */
+}
+.design__mobile__0.flipped::before {
+  transform: rotate(180deg); /* Applique la rotation sur l'image de fond */
 }
 @media (max-width: 767px) {
   .design__mobile__0__1 {
@@ -212,7 +229,7 @@ header .dotrose {
     padding-bottom: 1rem;
   }
   .design__mobile__0__1:hover {
-    background: linear-gradient(to top, #7a99ad, rgb(0, 0, 0));
+    background: linear-gradient(to top, rgba(122, 152, 173, 0.4901960784), rgb(0, 0, 0));
   }
 }
 @media (max-width: 767px) {
@@ -246,7 +263,7 @@ header .dotrose {
     padding-bottom: 1rem;
   }
   .design__mobile__0__3:hover {
-    background: linear-gradient(to bottom, orange, rgb(0, 0, 0));
+    background: linear-gradient(to bottom, rgba(255, 166, 0, 0.5176470588), rgb(0, 0, 0));
   }
 }
 @media (max-width: 767px) {
@@ -279,11 +296,16 @@ header .dotrose {
 }
 
 .textebefore:before {
-  content: "HTML";
-  animation: animate infinite 5s;
+  content: "Islam";
+  animation: animate infinite 10s;
+}
+@media (max-width: 767px) {
+  .textebefore:before {
+    animation: animate4 infinite 8s;
+  }
 }
 
-@keyframes animate {
+@keyframes animate4 {
   0% {
     content: "HTML";
   }
@@ -294,16 +316,42 @@ header .dotrose {
     content: "CSS";
   }
   40% {
-    content: "Javascript";
+    content: "SCSS";
   }
   60% {
-    content: "Nodejs";
+    content: "Javascript";
   }
   80% {
     content: "Reactjs";
   }
   100% {
     content: "Figma";
+  }
+}
+@keyframes animate {
+  0% {
+    content: "Islam";
+  }
+  15% {
+    content: "Islam";
+  }
+  25% {
+    content: "Makhachev";
+  }
+  40% {
+    content: "P4P";
+  }
+  55% {
+    content: "#1";
+  }
+  70% {
+    content: "Undisputed";
+  }
+  85% {
+    content: "Lightweight";
+  }
+  100% {
+    content: "Champion 🥇";
   }
 }
 @keyframes myAnim {
@@ -452,26 +500,31 @@ header .dotrose {
 }
 
 /*---------------------------------------------------------------*/
+.design__container0 {
+  background: black;
+  padding: 40px;
+}
+@media (max-width: 767px) {
+  .design__container0 {
+    padding: 0px;
+  }
+}
 .design__container {
+  margin: 0px auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 40px auto;
   padding: 20px 1px;
   background: linear-gradient(to bottom left, #487354, rgba(0, 0, 0, 0.951));
   width: 90%;
   border-radius: 25px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-  margin-bottom: 75px;
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  .design__container {
-    width: 90%;
-  }
+  border: 6px wheat solid;
 }
 @media (max-width: 767px) {
   .design__container {
     width: 99%;
+    border: none;
     border-top: wheat 6px solid;
     border-bottom: wheat 6px solid;
     border-radius: 0%;
@@ -481,10 +534,11 @@ header .dotrose {
 }
 .design__container .design__main {
   display: flex;
-  background-color: rgb(230, 239, 222);
+  background: linear-gradient(to bottom left, rgba(74, 72, 115, 0.6274509804), rgba(0, 0, 0, 0.951));
   padding: 20px;
   width: 90%;
   border-radius: 25px;
+  border: 6px wheat solid;
   /*---------------------------------------------------------------*/
 }
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -589,6 +643,7 @@ header .dotrose {
   margin-top: 50px;
   font-size: 60px;
   font-weight: 900;
+  color: rgba(255, 255, 255, 0.656);
 }
 @media (max-width: 767px) {
   .design__container .design__main__left__texte h4 {
@@ -604,9 +659,14 @@ header .dotrose {
     margin-top: 20px;
   }
 }
+@media (min-width: 1024px) and (max-width: 1370px) {
+  .design__container .design__main__left__texte h4 {
+    font-size: 50px;
+  }
+}
 .design__container .design__main__left__texte p {
   margin-bottom: 50px;
-  font-size: 90px;
+  font-size: 70px;
   font-weight: 900;
 }
 @media (max-width: 767px) {
@@ -617,13 +677,13 @@ header .dotrose {
 }
 @media (min-width: 1024px) and (max-width: 1370px) {
   .design__container .design__main__left__texte p {
-    font-size: 60px;
+    font-size: 50px;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .design__container .design__main__left__texte p {
     margin-bottom: 20px;
-    font-size: 60px;
+    font-size: 50px;
   }
 }
 

@@ -10,19 +10,40 @@
   }
   &__0 {
     @include mobile {
+      border: wheat 6px solid;
       width: 100%;
       height: 400px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
-      border: wheat 6px solid;
-      background: linear-gradient(to top, #7a99ad, rgb(0, 0, 0));
-      background-image: url("/assets/images/islamvspoirier.jpg"); // Image de fond
-      background-size: cover; // L'image couvre tout l'élément
-      background-position: center; // Centrer l'image
+      // background: linear-gradient(to top, #7a99ad, rgb(0, 0, 0));
+      // background-image: url("/assets/images/islamvspoirier.jpg"); // Image de fond
+      // background-size: cover; // L'image couvre tout l'élément
+      // background-position: center; // Centrer l'image
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
       border-radius: 10px;
+      position: relative;
+    }
+    &::before {
+      content: ""; /* Crée un élément pseudo */
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("/assets/images/makhachevposter.jpeg"); // Image de fond
+      background-size: cover; // L'image couvre tout l'élément
+      background-position: top center; // Centrer l'image
+      background-size: 150%; // Zoom de 10% sur l'image de fond
+      transform-origin: center; /* Assure que la rotation se fait autour du centre */
+      transition: background-position 2s, transform 0s; /* Ajoute une transition pour l'animation */
+    }
+    &.is-bottom::before {
+      background-position: bottom center; /* Position après clic */
+    }
+    &.flipped::before {
+      transform: rotate(180deg); /* Applique la rotation sur l'image de fond */
     }
     &__1 {
       @include mobile {
@@ -37,7 +58,7 @@
         margin-top: -40px;
         padding-bottom: 1rem;
         &:hover {
-          background: linear-gradient(to top, #7a99ad, rgb(0, 0, 0));
+          background: linear-gradient(to top, #7a98ad7d, rgb(0, 0, 0));
         }
       }
     }
@@ -76,7 +97,7 @@
         margin-bottom: -30px;
         padding-bottom: 1rem;
         &:hover {
-          background: linear-gradient(to bottom, orange, rgb(0, 0, 0));
+          background: linear-gradient(to bottom, #ffa60084, rgb(0, 0, 0));
         }
       }
     }
