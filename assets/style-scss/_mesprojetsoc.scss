@@ -5,11 +5,16 @@
   flex-direction: column;
   gap: 50px;
   position: relative;
+  @include mobile {
+    height: 210px;
+    gap: 24px;
+  }
 
   h2 {
     color: wheat;
     font-size: 35px;
     text-align: center;
+    margin-top: -23px;
   }
   p {
     margin-bottom: 50px;

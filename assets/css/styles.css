@@ -1314,10 +1314,17 @@ footer .social-icons li a:hover .fa-instagram {
   gap: 50px;
   position: relative;
 }
+@media (max-width: 767px) {
+  .projets {
+    height: 210px;
+    gap: 24px;
+  }
+}
 .projets h2 {
   color: wheat;
   font-size: 35px;
   text-align: center;
+  margin-top: -23px;
 }
 .projets p {
   margin-bottom: 50px;
