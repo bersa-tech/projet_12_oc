@@ -17,6 +17,12 @@
     @content;
   }
 }
+// media queries tablette section competences
+@mixin mediacompetences {
+  @media (min-width: 768px) and (max-width: 1145px) {
+    @content;
+  }
+}
 
 // mixin de base dipslay flex centré
 @mixin flex-center {

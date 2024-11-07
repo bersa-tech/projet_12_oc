@@ -191,6 +191,9 @@ header .dotrose {
     justify-content: space-between;
     border: wheat 6px solid;
     background: linear-gradient(to top, #7a99ad, rgb(0, 0, 0));
+    background-image: url("/assets/images/islamvspoirier.jpg");
+    background-size: cover;
+    background-position: center;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
   }
@@ -236,7 +239,7 @@ header .dotrose {
     height: 110px;
     border: orange 2px solid;
     border-radius: 6px;
-    background-color: #1d1e22;
+    background: linear-gradient(to bottom, transparent, rgb(0, 0, 0));
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
     margin-right: 0px;
     margin-bottom: -30px;
@@ -655,6 +658,27 @@ header .dotrose {
   justify-content: space-between;
   flex-direction: column;
   margin-left: 100px;
+  position: relative;
+}
+.design__main__droite__0::before {
+  content: ""; /* Crée un élément pseudo */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("/assets/images/makhachevposter.jpeg");
+  background-size: cover;
+  background-position: top center;
+  background-size: 120%;
+  transform-origin: center; /* Assure que la rotation se fait autour du centre */
+  transition: background-position 2s, transform 0s; /* Ajoute une transition pour l'animation */
+}
+.design__main__droite__0.is-bottom::before {
+  background-position: bottom center; /* Position après clic */
+}
+.design__main__droite__0.flipped::before {
+  transform: rotate(180deg); /* Applique la rotation sur l'image de fond */
 }
 @media (max-width: 767px) {
   .design__main__droite__0 {
@@ -689,7 +713,7 @@ header .dotrose {
   }
 }
 .design__main__droite__0__1:hover {
-  background: linear-gradient(to top, #7a99ad, rgb(0, 0, 0));
+  background: linear-gradient(to top, rgba(122, 152, 173, 0.4901960784), rgb(0, 0, 0));
 }
 .design__main__droite__0__2 {
   animation: myAnim 10s ease 0s 1 normal forwards;
@@ -717,7 +741,7 @@ header .dotrose {
   height: 110px;
   border: orange 2px solid;
   border-radius: 6px;
-  background-color: #1d1e22;
+  background: linear-gradient(to bottom, transparent, rgb(0, 0, 0));
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
   margin-right: 80px;
   margin-bottom: -30px;
@@ -729,7 +753,7 @@ header .dotrose {
   }
 }
 .design__main__droite__0__3:hover {
-  background: linear-gradient(to bottom, orange, rgb(0, 0, 0));
+  background: linear-gradient(to bottom, rgba(255, 166, 0, 0.5176470588), rgb(0, 0, 0));
 }
 .design__main__droite__0__head {
   margin-left: 15px;
@@ -1048,10 +1072,10 @@ footer .social-icons li a:hover .fa-instagram {
 }
 
 .competences {
-  padding: 0px 10px;
+  padding: 50px 10px;
+  background: linear-gradient(to top, #487354, rgba(0, 0, 0, 0.951));
   text-align: center;
   margin: 0 auto;
-  margin-bottom: 50px;
   /* Ajouter la barre de progression */
   /* Personnaliser chaque barre selon la compétence */
   /* Affichage du texte pourcentage à l'intérieur de la barre */
@@ -1063,40 +1087,48 @@ footer .social-icons li a:hover .fa-instagram {
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  width: 768px;
+  max-width: 1180px;
   gap: 30px;
   justify-items: center;
 }
+@media (min-width: 768px) and (max-width: 1145px) {
+  .competences .skills-grid {
+    max-width: 780px;
+  }
+}
 @media (max-width: 767px) {
   .competences .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    width: fit-content;
-    gap: 10px;
+    gap: 15px;
   }
 }
 .competences .skill {
+  width: 120px;
+  height: 110px;
+  border: wheat 6px solid;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 15px;
   border-radius: 10px;
   transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-  width: 180px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
-  border: wheat 6px solid;
 }
 @media (max-width: 767px) {
   .competences .skill {
     width: 120px;
-    height: 150px;
+    height: 110px;
   }
 }
 .competences .skill i {
-  font-size: 50px;
+  font-size: 30px;
   color: #ffffff;
   margin-bottom: 10px;
   transition: color 0.3s ease;
+}
+@media (max-width: 767px) {
+  .competences .skill i {
+    font-size: 24px;
+  }
 }
 .competences .skill .ux-ui-text {
   font-size: 17px;
@@ -1156,8 +1188,6 @@ footer .social-icons li a:hover .fa-instagram {
 }
 .competences .progress-bar {
   height: 100%;
-  width: 60%;
-  background-color: #4caf50;
   transition: width 0.4s ease-in-out;
   border-radius: 10px;
 }
@@ -1257,26 +1287,29 @@ footer .social-icons li a:hover .fa-instagram {
 
 .projets-texte:before {
   content: "Shopify";
-  animation: animate2 infinite 6s;
+  animation: animate2 infinite 10s;
 }
 
 @keyframes animate2 {
   0% {
     content: "Booki";
   }
-  10% {
+  15% {
+    content: "Booki";
+  }
+  25% {
     content: "OhMyFood";
   }
-  20% {
+  40% {
     content: "Print IT";
   }
-  40% {
+  55% {
     content: "Sophie Bluel";
   }
-  60% {
+  70% {
     content: "Kasa";
   }
-  80% {
+  85% {
     content: "Nina Carducci";
   }
   100% {

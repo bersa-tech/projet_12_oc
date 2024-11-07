@@ -39,25 +39,28 @@
 }
 .projets-texte:before {
   content: "Shopify";
-  animation: animate2 infinite 6s;
+  animation: animate2 infinite 10s;
 }
 @keyframes animate2 {
   0% {
     content: "Booki";
   }
-  10% {
+  15% {
+    content: "Booki";
+  }
+  25% {
     content: "OhMyFood";
   }
-  20% {
+  40% {
     content: "Print IT";
   }
-  40% {
+  55% {
     content: "Sophie Bluel";
   }
-  60% {
+  70% {
     content: "Kasa";
   }
-  80% {
+  85% {
     content: "Nina Carducci";
   }
   100% {

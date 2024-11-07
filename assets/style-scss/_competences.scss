@@ -1,48 +1,51 @@
 .competences {
-  padding: 0px 10px;
-  //background: linear-gradient(to bottom, transparent, rgb(24, 83, 46));
+  padding: 50px 10px;
+  // background: rgb(221, 193, 193);
+  background: linear-gradient(to top, #487354, rgba(0, 0, 0, 0.951));
   text-align: center;
   margin: 0 auto;
-  margin-bottom: 50px;
 
   .skills-grid {
+    // border: 1px solid red;
     @include flex-center;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    width: 768px;
+    max-width: 1180px;
     gap: 30px; // Espace entre les colonnes
     justify-items: center; // Centrer les éléments dans chaque colonne
+    @include mediacompetences {
+      max-width: 780px;
+    }
     @include mobile {
-      display: grid;
-      grid-template-columns: repeat(2, 50%);
-      width: fit-content;
-      gap: 10px;
+      gap: 15px;
     }
   }
 
   .skill {
+    width: 120px;
+    height: 110px;
+    border: wheat 6px solid;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-    // background-color: #333;
+    padding: 15px;
     border-radius: 10px;
     transition: transform 0.3s ease, background-color 0.3s ease,
       box-shadow 0.3s ease;
-    //min-width: 140px;
-    width: 180px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
-    border: wheat 6px solid;
     @include mobile {
       width: 120px;
-      height: 150px;
+      height: 110px;
     }
     i {
-      font-size: 50px;
+      font-size: 30px;
       color: #ffffff;
       margin-bottom: 10px;
       transition: color 0.3s ease;
+      @include mobile {
+        font-size: 24px;
+      }
     }
 
     .ux-ui-text {
@@ -135,8 +138,6 @@
 
   .progress-bar {
     height: 100%;
-    width: 60%; // Valeur par défaut, à modifier manuellement pour chaque compétence
-    background-color: #4caf50; // Vert par défaut
     transition: width 0.4s ease-in-out;
     border-radius: 10px;
   }

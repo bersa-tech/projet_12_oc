@@ -18,6 +18,9 @@
       justify-content: space-between;
       border: wheat 6px solid;
       background: linear-gradient(to top, #7a99ad, rgb(0, 0, 0));
+      background-image: url("/assets/images/islamvspoirier.jpg"); // Image de fond
+      background-size: cover; // L'image couvre tout l'élément
+      background-position: center; // Centrer l'image
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
       border-radius: 10px;
     }
@@ -66,7 +69,8 @@
         height: 110px;
         border: orange 2px solid;
         border-radius: 6px;
-        background-color: #1d1e22;
+        // background-color: #1d1e22;
+        background: linear-gradient(to bottom, transparent, rgb(0, 0, 0));
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
         margin-right: 0px;
         margin-bottom: -30px;
