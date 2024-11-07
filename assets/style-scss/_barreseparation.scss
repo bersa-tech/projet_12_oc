@@ -6,6 +6,22 @@
 //   border-top: wheat 6px solid;
 //   border-bottom: wheat 6px solid;
 // }
+.separate-header {
+  margin-bottom: 20px;
+  transition: height 0.4s;
+  a {
+    color: white;
+    text-decoration: none;
+    transition: transform 0.6s ease-in-out;
+    &:hover {
+      color: #9ef8e9;
+    }
+  }
+  &:hover {
+    height: 80px;
+    border-top: wheat 10px solid;
+  }
+}
 
 .separate {
   position: relative;
@@ -25,14 +41,18 @@
     color: white;
     font-size: 23px;
     white-space: nowrap;
-    animation: scroll 10s linear infinite;
+    // animation: scroll2 19s linear infinite;
     font-family: $font1;
     @include mobile {
       animation: scroll 7s linear infinite;
       font-size: 18px;
     }
   }
-
+  .scrolling-text-header {
+    @include mobile {
+      animation: scroll 12s linear infinite;
+    }
+  }
   // Effet de brillance
   &:after {
     content: "";
@@ -44,25 +64,5 @@
     background: rgba(255, 255, 255, 0.2);
     transform: skewX(-30deg);
     animation: shine 2s infinite;
-  }
-}
-
-// Animation de défilement pour le texte
-@keyframes scroll {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-// Animation "shine" pour l’effet lumineux
-@keyframes shine {
-  0% {
-    left: 130%;
-  }
-  100% {
-    left: -50%;
   }
 }

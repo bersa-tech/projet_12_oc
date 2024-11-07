@@ -18,7 +18,8 @@
   @include mobile {
     width: fit-content;
     height: fit-content;
-    margin: 0 auto;
+    margin: 0px auto;
+    margin-bottom: 30px;
     padding: 20px 20px;
     animation: myAnim 2s ease 0s 1 normal forwards;
     //margin-bottom: 70px;
@@ -27,13 +28,14 @@
     display: flex;
     flex-direction: row;
     gap: 30px;
+    position: relative;
+
     @include tablet {
       width: 100%;
       text-align: center;
     }
     @include mobile {
       // animation: appear1 1.5s ease 0s 1 normal forwards;
-      position: relative;
       gap: 25px;
       width: 265px;
     }
@@ -51,10 +53,10 @@
         // color: #ffc8c8;
         color: wheat;
         font-size: 80px;
-        top: 215px;
+        top: -42px;
         position: absolute;
         @include tablet {
-          top: 245px;
+          top: -9px;
         }
         @include mobile {
           top: -47px;
@@ -63,11 +65,11 @@
       .eclamationspan {
         color: wheat;
         font-size: 60px;
-        top: 235px;
+        top: -22px;
         position: absolute;
         margin-left: 4px;
         @include tablet {
-          top: 265px;
+          top: 10px;
           margin-left: 8px;
         }
         @include mobile {

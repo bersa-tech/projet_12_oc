@@ -1,5 +1,6 @@
 {
   "editor.formatOnSave": true,
   "files.autoSaveWhenNoErrors": false,
-  "editor.formatOnSaveMode": "file"
+  "editor.formatOnSaveMode": "file",
+  "liveServer.settings.port": 5501
 }

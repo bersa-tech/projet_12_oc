@@ -46,15 +46,4 @@ header {
     padding-bottom: 34px;
     //border: 1px solid red;
   }
-  .pc {
-    display: none;
-    @include mobile {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-right: 30px;
-      font-size: 50px;
-      animation: myAnim2 2s ease 0s 1 normal forwards;
-    }
-  }
 }

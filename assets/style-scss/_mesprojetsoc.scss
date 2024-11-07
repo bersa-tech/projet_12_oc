@@ -1,0 +1,66 @@
+.projets {
+  height: 300px;
+  background: black;
+  @include flex-center;
+  flex-direction: column;
+  gap: 50px;
+  position: relative;
+
+  h2 {
+    color: wheat;
+    font-size: 35px;
+    text-align: center;
+  }
+  p {
+    margin-bottom: 50px;
+    font-size: 90px;
+    font-weight: 900;
+    @include mobile {
+      margin-bottom: 20px;
+      font-size: 38px;
+    }
+    @include tablet {
+    }
+  }
+  .projets-span {
+    position: absolute;
+    color: white;
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.5);
+    bottom: 20;
+    animation: bounce 2s infinite; /* Animation rebond continu */
+    &:hover {
+      color: #ff79da; /* Exemple de couleur pour le survol */
+    }
+  }
+}
+.projets-texte {
+  color: #ffc8c8;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.5);
+}
+.projets-texte:before {
+  content: "Shopify";
+  animation: animate2 infinite 6s;
+}
+@keyframes animate2 {
+  0% {
+    content: "Booki";
+  }
+  10% {
+    content: "OhMyFood";
+  }
+  20% {
+    content: "Print IT";
+  }
+  40% {
+    content: "Sophie Bluel";
+  }
+  60% {
+    content: "Kasa";
+  }
+  80% {
+    content: "Nina Carducci";
+  }
+  100% {
+    content: "Portfolio";
+  }
+}
