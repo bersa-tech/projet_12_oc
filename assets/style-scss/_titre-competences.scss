@@ -1,39 +1,37 @@
-.competences-title {
-  border: 6px solid wheat;
-  // background: linear-gradient(to bottom left, #487354, rgba(0, 0, 0, 0.951));
-  background-color: black;
-  margin: 40px auto;
-  width: fit-content;
-  height: 30px;
-  padding: 20px 40px;
-  border-radius: 30px;
-  box-shadow: 0px 7px 29px 4px rgba(0, 0, 0, 0.25);
-  position: relative;
-  &-1 {
-    // border: red solid 2px;
-    @include flex-center;
-    gap: 25px;
-    @include mobile {
-      width: 265px;
-    }
-    h2 {
-      font-size: 32px;
-      font-family: $font1;
-      font-weight: 500;
-      padding-right: 15px;
-      color: white;
-      @include mobile {
-        font-size: 28px;
-      }
-      span {
-        color: wheat;
-        font-size: 80px;
-        top: -20px;
-        position: absolute;
-        @include mobile {
-          top: -25px;
-        }
-      }
-    }
-  }
-}
+// .competences-title {
+//   border: 6px solid wheat;
+//   background-color: black;
+//   margin: 40px auto;
+//   width: fit-content;
+//   height: 30px;
+//   padding: 20px 40px;
+//   border-radius: 30px;
+//   box-shadow: 0px 7px 29px 4px rgba(0, 0, 0, 0.25);
+//   position: relative;
+//   &-1 {
+//     @include flex-center;
+//     gap: 25px;
+//     @include mobile {
+//       width: 265px;
+//     }
+//     h2 {
+//       font-size: 32px;
+//       font-family: $font1;
+//       font-weight: 500;
+//       padding-right: 15px;
+//       color: white;
+//       @include mobile {
+//         font-size: 28px;
+//       }
+//       span {
+//         color: wheat;
+//         font-size: 80px;
+//         top: -20px;
+//         position: absolute;
+//         @include mobile {
+//           top: -25px;
+//         }
+//       }
+//     }
+//   }
+// }

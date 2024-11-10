@@ -1,11 +1,11 @@
 .intro__saber {
   border: 6px solid wheat;
-  background: linear-gradient(to bottom left, #487354, rgba(0, 0, 0, 0.951));
+  // background: linear-gradient(to bottom left, #487354, rgba(0, 0, 0, 0.951));
+  background: linear-gradient(to bottom left, #4a4873a0, rgba(0, 0, 0, 0.951));
   margin: 40px auto;
   width: fit-content;
   height: 30px;
   padding: 20px 40px;
-  //  border: 3px solid red;
   border-radius: 30px;
   box-shadow: 0px 7px 29px 4px rgba(0, 0, 0, 0.25);
   @include tablet {
@@ -22,7 +22,6 @@
     margin-bottom: 30px;
     padding: 20px 20px;
     animation: myAnim 2s ease 0s 1 normal forwards;
-    //margin-bottom: 70px;
   }
   &__title {
     display: flex;
@@ -35,7 +34,6 @@
       text-align: center;
     }
     @include mobile {
-      // animation: appear1 1.5s ease 0s 1 normal forwards;
       gap: 25px;
       width: 265px;
     }
@@ -50,7 +48,6 @@
         font-weight: 500;
       }
       span {
-        // color: #ffc8c8;
         color: wheat;
         font-size: 80px;
         top: -42px;

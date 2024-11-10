@@ -1,0 +1,120 @@
+/*---------------------------------------------------------------*/
+.presentation__container {
+  font-family: "Courier New", Courier, monospace;
+  //background: linear-gradient(to bottom, rgba(2, 2, 37, 0.787), rgb(0, 0, 0));
+  background: linear-gradient(to bottom left, #4a4873a0, rgba(0, 0, 0, 0.951));
+  display: flex;
+  @include mobile {
+    background: linear-gradient(to bottom, rgba(2, 2, 37, 0.787), rgb(0, 0, 0));
+  }
+}
+.presentation__main {
+  padding: 20px 20px;
+  width: 100%;
+  @include flex-center;
+  @include mobile {
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 0px;
+  }
+  .presentation__left0 {
+    @include flex-center;
+
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    @include mobile {
+      max-width: none;
+      width: 100%;
+      gap: 10px;
+    }
+    blockquote {
+      font-size: 26px;
+      color: wheat;
+      text-align: center;
+      @include mobile {
+        padding-bottom: 10px;
+      }
+    }
+    .download-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: linear-gradient(
+        to bottom left,
+        #487354,
+        rgba(0, 0, 0, 0.951)
+      );
+      color: white;
+      font-size: 16px;
+      font-family: "Arial", sans-serif;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      border: 4px wheat solid;
+      animation: appear1 1s forwards;
+      @include mobile {
+        margin-bottom: 20px;
+      }
+    }
+
+    .download-btn:hover {
+      background-color: #145a42; /* Couleur au survol */
+    }
+  }
+  .presentation__left {
+    width: 300px;
+    height: 300px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    border: 22px wheat solid;
+    position: relative;
+    background-image: url("../images/saber-petit.jpeg");
+    background-size: cover;
+    background-position: top;
+    border-radius: 10px;
+    @include tablet {
+      width: 300px;
+    }
+    @include mobile {
+      width: 300px;
+      margin-bottom: 20px;
+      border: 7px rgb(161, 159, 165) solid;
+    }
+  }
+  .presentation__right {
+    margin-left: 60px;
+    width: 60%;
+    max-width: 630px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @include tablet {
+      margin-left: 30px;
+    }
+    @include mobile {
+      width: 100%;
+      margin: 0;
+      padding-bottom: 20px;
+    }
+    &__title {
+      border-radius: 10px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+      padding: 15px;
+      border: 3px solid wheat;
+      @include mobile {
+        border: 6px solid rgba(247, 247, 247, 0.33);
+      }
+      h3 {
+        font-size: 27px;
+        color: white;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.624);
+      }
+    }
+  }
+}

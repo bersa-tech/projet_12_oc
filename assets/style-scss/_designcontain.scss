@@ -41,25 +41,16 @@
   border-radius: 25px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
   border: 6px wheat solid;
-  // background: black;
   @include tablet {
-    // width: 100%;
-    // border: none;
-    // background: none;
   }
   @include mobile {
     width: 99%;
     border: none;
-    //  border-top: wheat 6px solid;
     background: black;
-    // border-bottom: wheat 6px solid;
     border-radius: 0%;
-    // margin-top: 30px;
-    // margin-bottom: 60px;
   }
   .design__main {
     display: flex;
-    // background-color: rgb(230 239 222);
     background: linear-gradient(
       to bottom left,
       #4a4873a0,
@@ -81,7 +72,7 @@
       background: none;
     }
 
-    /*---------------------------------------------------------------*/
+    // -----------------------------------------------------------------------
     &__left {
       position: relative;
       display: flex;
@@ -201,10 +192,6 @@
     min-width: 440px;
     height: 450px;
     background: linear-gradient(to bottom right, #487354, rgba(0, 0, 0, 0.951));
-    //    background-image: url("/assets/images/makhachevposter.jpeg"); // Image de fond
-    // background-size: cover; // L'image couvre tout l'élément
-    // background-position: top center; // Centrer l'image
-    // background-size: 120%; // Zoom de 10% sur l'image de fond
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     display: flex;
@@ -212,11 +199,7 @@
     justify-content: space-between;
     flex-direction: column;
     margin-left: 100px;
-    // transition: background-position 2s;
     position: relative;
-    // &.is-bottom {
-    //   background-position: bottom center; // Position après clic
-    // }
     &::before {
       content: ""; /* Crée un élément pseudo */
       position: absolute;
@@ -224,18 +207,18 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background-image: url("/assets/images/makhachevposter.jpeg"); // Image de fond
-      background-size: cover; // L'image couvre tout l'élément
-      background-position: top center; // Centrer l'image
-      background-size: 120%; // Zoom de 10% sur l'image de fond
-      transform-origin: center; /* Assure que la rotation se fait autour du centre */
-      transition: background-position 2s, transform 0s; /* Ajoute une transition pour l'animation */
+      background-image: url("/assets/images/makhachevposter.jpeg");
+      background-size: cover;
+      background-position: top center;
+      background-size: 120%;
+      transform-origin: center;
+      transition: background-position 2s, transform 0s;
     }
     &.is-bottom::before {
-      background-position: bottom center; /* Position après clic */
+      background-position: bottom center; // Position après clic
     }
     &.flipped::before {
-      transform: rotate(180deg); /* Applique la rotation sur l'image de fond */
+      transform: rotate(180deg); // Applique la rotation sur l'image de fond
     }
 
     @include mobile {
@@ -262,7 +245,6 @@
         margin-right: 92px;
       }
       &:hover {
-        // background: linear-gradient(to top, #7a99ad, rgb(0, 0, 0));
         background: linear-gradient(to top, #7a98ad7d, rgb(0, 0, 0));
       }
     }
@@ -304,7 +286,6 @@
       }
     }
     &__3:hover {
-      // background: linear-gradient(to bottom, #ffa500, rgb(0, 0, 0));
       background: linear-gradient(to bottom, #ffa60084, rgb(0, 0, 0));
     }
     &__head {

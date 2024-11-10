@@ -30,11 +30,14 @@
   .projets-span {
     position: absolute;
     color: white;
-    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.5);
-    bottom: 20;
-    animation: bounce 2s infinite; /* Animation rebond continu */
+    bottom: 8px;
+    font-size: 29px;
+    animation: bounce 2s infinite;
+    @include mobile {
+      font-size: 19px;
+    }
     &:hover {
-      color: #ff79da; /* Exemple de couleur pour le survol */
+      color: #ff79da;
     }
   }
 }
@@ -45,30 +48,4 @@
 .projets-texte:before {
   content: "Shopify";
   animation: animate2 infinite 10s;
-}
-@keyframes animate2 {
-  0% {
-    content: "Booki";
-  }
-  15% {
-    content: "Booki";
-  }
-  25% {
-    content: "OhMyFood";
-  }
-  40% {
-    content: "Print IT";
-  }
-  55% {
-    content: "Sophie Bluel";
-  }
-  70% {
-    content: "Kasa";
-  }
-  85% {
-    content: "Nina Carducci";
-  }
-  100% {
-    content: "Portfolio";
-  }
 }

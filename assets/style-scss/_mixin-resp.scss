@@ -11,7 +11,7 @@
     @content;
   }
 }
-// media queries tablette
+// media queries pc
 @mixin pc {
   @media (min-width: 1024px) and (max-width: 1370px) {
     @content;
@@ -24,7 +24,7 @@
   }
 }
 
-// mixin de base dipslay flex centré
+// mixin de base dipslay flex center
 @mixin flex-center {
   display: flex;
   justify-content: center;

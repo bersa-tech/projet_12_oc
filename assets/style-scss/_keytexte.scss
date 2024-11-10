@@ -1,6 +1,5 @@
+// toutes mes keyframes
 // ----------------------------------------------
-// ----------------------------------------------
-
 .textebefore {
   color: #ffc8c8;
   text-shadow: 0 2px 0 rgba(0, 0, 0, 0.5);
@@ -63,7 +62,6 @@
 }
 
 // ----------------------------------------------
-// ----------------------------------------------
 @keyframes myAnim {
   0% {
     animation-timing-function: ease-in;
@@ -78,7 +76,6 @@
   40% {
     animation-timing-function: ease-in;
     transform: translateX(26px);
-    // background: #ffc8c8;
   }
 
   65% {
@@ -112,7 +109,6 @@
   }
 }
 // ----------------------------------------------
-// ----------------------------------------------
 @keyframes myAnim2 {
   0%,
   50%,
@@ -126,7 +122,6 @@
   }
 }
 // ----------------------------------------------
-// ----------------------------------------------
 @keyframes appear1 {
   0% {
     opacity: 0;
@@ -138,7 +133,6 @@
     transform: scale(1);
   }
 } // ----------------------------------------------
-/* Animation de rebond */
 @keyframes bounce {
   0%,
   20%,
@@ -154,9 +148,7 @@
     transform: translateY(-5px);
   }
 }
-
 // ----------------------------------------------
-
 /* Animation de fade-in montée */
 @keyframes fadeInUp {
   0% {
@@ -168,7 +160,7 @@
     transform: translateY(0);
   }
 }
-
+// ----------------------------------------------
 /* Animation shimmer (reflet lumineux) */
 @keyframes shimmer {
   0% {
@@ -178,7 +170,7 @@
     left: 150%;
   }
 }
-
+// ----------------------------------------------
 // Animation de défilement pour le texte
 @keyframes scroll {
   0% {
@@ -188,7 +180,7 @@
     transform: translateX(-100%);
   }
 }
-
+// ----------------------------------------------
 // Animation "shine" pour l’effet lumineux
 @keyframes shine {
   0% {
@@ -198,7 +190,7 @@
     left: -50%;
   }
 }
-
+// ----------------------------------------------
 // Animation de défilement pour le texte
 @keyframes scroll2 {
   0% {
@@ -211,11 +203,47 @@
     transform: translateX(200%);
   }
 }
-
 // ----------------------------------------------
 @keyframes fillProgressBar {
   from {
     width: 0;
+  }
+}
+// ----------------------------------------------
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+// ----------------------------------------------
+@keyframes animate2 {
+  0% {
+    content: "Booki";
+  }
+  15% {
+    content: "Booki";
+  }
+  25% {
+    content: "OhMyFood";
+  }
+  40% {
+    content: "Print IT";
+  }
+  55% {
+    content: "Sophie Bluel";
+  }
+  70% {
+    content: "Kasa";
+  }
+  85% {
+    content: "Nina Carducci";
+  }
+  100% {
+    content: "Portfolio";
   }
 }
 // ----------------------------------------------

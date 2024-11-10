@@ -6,14 +6,13 @@
   margin: 0 auto;
 
   .skills-grid {
-    // border: 1px solid red;
     @include flex-center;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     max-width: 1180px;
-    gap: 30px; // Espace entre les colonnes
-    justify-items: center; // Centrer les éléments dans chaque colonne
+    gap: 30px;
+    justify-items: center;
     @include mediacompetences {
       max-width: 780px;
     }
@@ -60,7 +59,6 @@
 
     &:hover {
       transform: scale(1.1);
-      // background-color: #444;
       background-color: black;
       box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
     }
@@ -99,33 +97,43 @@
       color: #ffa500;
     } // SEO
 
-    // .fa-html5 {
-    //   color: #e34f26;
-    // } // HTML (rouge)
-    // .fa-css3-alt {
-    //   color: #264de4;
-    // } // CSS (bleu)
-    // .fa-sass {
-    //   color: #cc6699;
-    // } // Sass (rose)
-    // .fa-js-square {
-    //   color: #f0db4f;
-    // } // JavaScript (jaune)
-    // .fa-react {
-    //   color: #61dafb;
-    // } // React (bleu clair)
-    // .fa-figma {
-    //   color: #a259ff;
-    // } // Figma (violet)
-    // .fa-node-js {
-    //   color: #68a063;
-    // } // Node.js (vert)
-    // .fa-paint-brush {
-    //   color: #ff6347;
-    // } // UI/UX Design (orange)
+    @include mobile {
+      .fa-html5 {
+        color: #e34f26;
+      } // HTML (rouge)
+      .fa-css3-alt {
+        color: #264de4;
+      } // CSS (bleu)
+      .fa-sass {
+        color: #cc6699;
+      } // Sass (rose)
+      .fa-js-square {
+        color: #f0db4f;
+      } // JavaScript (jaune)
+      .fa-react {
+        color: #61dafb;
+      } // React (bleu clair)
+      .fa-figma {
+        color: #a259ff;
+      } // Figma (violet)
+      .fa-node-js {
+        color: #68a063;
+      } // Node.js (vert)
+      .fa-paint-brush {
+        color: #ff6347;
+      } // UI/UX Design (orange)
+      .fa-shopify {
+        color: #96bf48;
+      } // Shopify
+      .fa-wordpress {
+        color: #21759b;
+      } // WordPress
+      .fa-search {
+        color: #ffa500;
+      } // SEO
+    }
   }
-
-  /* Ajouter la barre de progression */
+  // Ajouter la barre de progression
   .progress-bar-container {
     width: 100%;
     background-color: #555;
@@ -142,7 +150,7 @@
     border-radius: 10px;
   }
 
-  /* Personnaliser chaque barre selon la compétence */
+  // Personnaliser chaque barre selon la compétence
   .html .progress-bar {
     background-color: #e34f26;
   }
@@ -150,7 +158,7 @@
     background-color: #264de4;
   }
   .scss .progress-bar {
-    background-color: #cc6699; // Couleur de la barre de progression pour SCSS
+    background-color: #cc6699;
   }
   .javascript .progress-bar {
     background-color: #f0db4f;
@@ -177,14 +185,14 @@
     background-color: #ffa500;
   } // Orange pour SEO
 
-  /* Affichage du texte pourcentage à l'intérieur de la barre */
+  // Affichage du texte pourcentage à l'intérieur de la barre
   .progress-bar-container {
     position: relative;
     text-align: center;
   }
 
   .progress-bar-container::after {
-    content: attr(data-progress) "%"; /* Affiche le pourcentage */
+    content: attr(data-progress) "%"; // gestions facile de la barre de progression via le html
     position: absolute;
     width: 100%;
     text-align: center;
